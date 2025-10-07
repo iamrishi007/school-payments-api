@@ -25,7 +25,9 @@ app.use("/payments", paymentRoutes);
 app.use("/webhook", webhookRoutes);
 app.use("/transactions", transactionRoutes);
 
-
+app.get("/",(req,res)=>{
+  res.send("Welcome on School Payments ")
+})
 app.use((req, res) => res.status(404).json({ message: "Endpoint not found" }));
 
 
