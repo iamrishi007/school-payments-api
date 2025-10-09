@@ -6,7 +6,7 @@ const OrderStatus = require("../models/orderStatus.model");
 exports.getAllTransactions = async (req, res, next) => {
   try {
     const page = parseInt(req.query.page) || 1;
-    const limit = Math.min(parseInt(req.query.limit) || 20, 100);
+    const limit = Math.min(parseInt(req.query.limit) || 30, 100);
     const sortField = req.query.sort || "createdAt";
     const sortOrder = req.query.order === "asc" ? 1 : -1;
     const statusFilter = req.query.status;
